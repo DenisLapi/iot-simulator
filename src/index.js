@@ -10,6 +10,7 @@ const sensorIds = [
 ]
 
 cron.schedule('*/10 * * * * *', () => {
+  console.log('Starting...')
   sensorIds.forEach(id => {
     const label = moment().format('YYYY.MM.DD HH:mm')
     const value = Math.floor(Math.random() * 100) + 1
